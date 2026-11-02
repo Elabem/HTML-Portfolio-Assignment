@@ -1,0 +1,13 @@
+CV PLACEHOLDER
+==============
+
+This is NOT a real CV. It is a placeholder file for the "Download my CV" link on the portfolio home page.
+
+Owner: Elabem Medfer Alemu
+
+To replace it with the real CV:
+1. Save your CV as a PDF named cv.pdf inside the files/ folder.
+2. In index.html, find the line marked "CV LINK" and change
+   href="files/CV_PLACEHOLDER.txt" to href="files/cv.pdf"
+   (and change the link text from "placeholder" to "PDF").
+3. Delete this file.
