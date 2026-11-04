@@ -12,6 +12,7 @@
 <body>
 
 <header id="top">
+<canvas id="logo" width="120" height="120" role="img" aria-label="Logo with the initials EM">Elabem Medfer Alemu logo</canvas>
 <h1>Elabem Medfer Alemu</h1>
 <!-- PROFILE PHOTO: to use your real photograph, save it as images/profile.jpg and change the src below to "images/profile.jpg" -->
 <figure>
@@ -190,6 +191,8 @@ Your browser does not support the audio element.
 <label for="cr-oop">OOP</label>
 <meter id="cr-oop" value="3" min="0" max="4">3 credit hours</meter> 3
 </p>
+<h3>Credit Hours Bar Chart</h3>
+<canvas id="creditChart" width="300" height="150" role="img" aria-label="Bar chart of credit hours: COA 4, DSA 4, IP 3, OOP 3">Bar chart of credit hours per course</canvas>
 </section>
 
 <section id="formatting">
@@ -254,10 +257,11 @@ int main() {
 <li>Audio, video and embedded content</li>
 <li>Interactive elements (details, dialog, meter and progress)</li>
 <li>Dates, abbreviations and entities</li>
+<li>Canvas</li>
 </ol>
 <p>
 <label for="topics">HTML topics covered in this portfolio:</label>
-<progress id="topics" value="13" max="14">13 of 14</progress> 13 of 14
+<progress id="topics" value="14" max="14">14 of 14</progress> 14 of 14
 </p>
 
 <h3>Technology glossary</h3>
@@ -373,6 +377,51 @@ int main() {
 | <a href="mailto:elabem.medfer@aastustudent.edu.et">Email</a>
 </p>
 </footer>
+
+<script>
+  // Logo: blue square, white circle and the initials EM
+  const canvas = document.getElementById('logo');
+  const ctx = canvas.getContext('2d');
+  // 1. Blue square background: x, y, width, height
+  ctx.fillStyle = "#1f5fa8";
+  ctx.fillRect(0, 0, 120, 120);
+  // 2. White circle: centre x, centre y, radius, start angle, end angle
+  ctx.beginPath();
+  ctx.arc(60, 60, 45, 0, 2 * Math.PI);
+  ctx.fillStyle = "white";
+  ctx.fill();
+  // 3. Initials in the middle
+  ctx.fillStyle = "#1f5fa8";
+  ctx.font = "bold 36px Arial";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("EM", 60, 62);
+
+  // Bar chart of credit hours: each credit hour is 25 pixels high
+  const chart = document.getElementById('creditChart');
+  const chartCtx = chart.getContext('2d');
+  // Baseline of the chart
+  chartCtx.fillStyle = "#333333";
+  chartCtx.fillRect(10, 130, 280, 2);
+  // Bars: x, y (130 minus height), width, height
+  chartCtx.fillStyle = "#1f5fa8";
+  chartCtx.fillRect(25, 30, 40, 100);   // COA, 4 credit hours
+  chartCtx.fillRect(95, 30, 40, 100);   // DSA, 4 credit hours
+  chartCtx.fillRect(165, 55, 40, 75);   // IP, 3 credit hours
+  chartCtx.fillRect(235, 55, 40, 75);   // OOP, 3 credit hours
+  // Course names under the bars and values above them
+  chartCtx.fillStyle = "#000000";
+  chartCtx.font = "14px Arial";
+  chartCtx.textAlign = "center";
+  chartCtx.fillText("COA", 45, 146);
+  chartCtx.fillText("DSA", 115, 146);
+  chartCtx.fillText("IP", 185, 146);
+  chartCtx.fillText("OOP", 255, 146);
+  chartCtx.fillText("4", 45, 24);
+  chartCtx.fillText("4", 115, 24);
+  chartCtx.fillText("3", 185, 49);
+  chartCtx.fillText("3", 255, 49);
+</script>
 
 </body>
 </html>
