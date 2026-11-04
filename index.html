@@ -19,6 +19,13 @@
 <figcaption>Profile photo placeholder (the real photograph will be added later)</figcaption>
 </figure>
 <p>Software Engineering student, Year 3, Addis Ababa Science and Technology University</p>
+<button type="button" onclick="document.getElementById('contactDialog').showModal()">Contact me</button>
+<dialog id="contactDialog">
+<h2>Get in touch</h2>
+<p>You are welcome to contact me about projects, study groups or other opportunities.</p>
+<p><a href="#contact" onclick="document.getElementById('contactDialog').close()">Send me a message</a> or <a href="files/CV_PLACEHOLDER.txt" download>download my CV</a> (placeholder file).</p>
+<button type="button" onclick="document.getElementById('contactDialog').close()">Close</button>
+</dialog>
 <nav>
 <p>
 <a href="#intro">Introduction</a>
@@ -164,6 +171,24 @@ Your browser does not support the audio element.
 </tr>
 </tfoot>
 </table>
+<h3>Credit Hours per Course</h3>
+<p>Each gauge shows the credit hours of a course on a scale from 0 to 4.</p>
+<p>
+<label for="cr-coa">COA</label>
+<meter id="cr-coa" value="4" min="0" max="4">4 credit hours</meter> 4
+</p>
+<p>
+<label for="cr-dsa">DSA</label>
+<meter id="cr-dsa" value="4" min="0" max="4">4 credit hours</meter> 4
+</p>
+<p>
+<label for="cr-ip">IP</label>
+<meter id="cr-ip" value="3" min="0" max="4">3 credit hours</meter> 3
+</p>
+<p>
+<label for="cr-oop">OOP</label>
+<meter id="cr-oop" value="3" min="0" max="4">3 credit hours</meter> 3
+</p>
 </section>
 
 <section id="formatting">
@@ -226,7 +251,12 @@ int main() {
 <li>Contact form basics</li>
 <li>Input types and validation</li>
 <li>Audio, video and embedded content</li>
+<li>Interactive elements (details, dialog, meter and progress)</li>
 </ol>
+<p>
+<label for="topics">HTML topics covered in this portfolio:</label>
+<progress id="topics" value="12" max="14">12 of 14</progress> 12 of 14
+</p>
 
 <h3>Technology glossary</h3>
 <dl>
