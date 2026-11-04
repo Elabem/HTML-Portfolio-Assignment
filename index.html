@@ -14,17 +14,13 @@
 <header id="top">
 <canvas id="logo" width="120" height="120" role="img" aria-label="Logo with the initials EM">Elabem Medfer Alemu logo</canvas>
 <h1>Elabem Medfer Alemu</h1>
-<!-- PROFILE PHOTO: to use your real photograph, save it as images/profile.jpg and change the src below to "images/profile.jpg" -->
-<figure>
-<img src="images/profile-placeholder.svg" alt="Placeholder for the profile photograph of Elabem Medfer Alemu" title="Profile photo placeholder" width="200" height="200">
-<figcaption>Profile photo placeholder (the real photograph will be added later)</figcaption>
-</figure>
+<img src="images/profile.jpg" alt="Portrait of Elabem Medfer Alemu" title="Elabem Medfer Alemu" width="200" height="200">
 <p>Software Engineering student, Year 3, Addis Ababa Science and Technology University</p>
 <button type="button" onclick="document.getElementById('contactDialog').showModal()">Contact me</button>
 <dialog id="contactDialog">
 <h2>Get in touch</h2>
 <p>You are welcome to contact me about projects, study groups or other opportunities.</p>
-<p><a href="#contact" onclick="document.getElementById('contactDialog').close()">Send me a message</a> or <a href="files/CV_PLACEHOLDER.txt" download>download my CV</a> (placeholder file).</p>
+<p><a href="#contact" onclick="document.getElementById('contactDialog').close()">Send me a message</a> or <a href="files/cv.pdf" download>download my CV</a>.</p>
 <button type="button" onclick="document.getElementById('contactDialog').close()">Close</button>
 </dialog>
 <nav>
@@ -65,7 +61,6 @@
 <source src="media/intro.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-<p>This is a placeholder sound. The real voice introduction will replace <code>media/intro.mp3</code> later.</p>
 </section>
 
 <section id="languages">
@@ -234,9 +229,7 @@ int main() {
 <p>Source: Harold Abelson and Gerald Jay Sussman, <cite>Structure and Interpretation of Computer Programs</cite>.</p>
 <p>A short quotation inside a sentence: a well-known saying among programmers is <q>Talk is cheap. Show me the code.</q> (Linus Torvalds).</p>
 <h3>A talk to watch</h3>
-<!-- To use a different talk, copy the embed address from YouTube (Share, then Embed) and replace the src below -->
-<iframe src="https://www.youtube.com/embed/UF8uR6Z6KLc" width="560" height="315" title="YouTube video: Steve Jobs' 2005 Stanford Commencement Address" allowfullscreen>
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UF8uR6Z6KLc?si=iObA3fiQO_wOhIkv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe>
 </aside>
 
 <section id="learning">
@@ -284,8 +277,7 @@ int main() {
 <p>Email: <a href="mailto:elabem.medfer@aastustudent.edu.et">elabem.medfer@aastustudent.edu.et</a></p>
 <p>GitHub: <a href="https://github.com/Elabem">github.com/Elabem</a></p>
 <p>LinkedIn: <a href="https://www.linkedin.com/in/elabem-medfer-5158b2364">linkedin.com/in/elabem-medfer-5158b2364</a></p>
-<!-- CV LINK: replace the placeholder file with your real CV (see files/CV_PLACEHOLDER.txt) -->
-<p><a href="files/CV_PLACEHOLDER.txt" download>Download my <abbr title="Curriculum Vitae">CV</abbr> (placeholder file, the real CV will be added later)</a></p>
+<p><a href="files/cv.pdf" download>Download my <abbr title="Curriculum Vitae">CV</abbr> (PDF)</a></p>
 <p>See my work on the <a href="projects.html">Projects page</a>.</p>
 
 <h3>Connect with me</h3>
@@ -378,50 +370,7 @@ int main() {
 </p>
 </footer>
 
-<script>
-  // Logo: blue square, white circle and the initials EM
-  const canvas = document.getElementById('logo');
-  const ctx = canvas.getContext('2d');
-  // 1. Blue square background: x, y, width, height
-  ctx.fillStyle = "#1f5fa8";
-  ctx.fillRect(0, 0, 120, 120);
-  // 2. White circle: centre x, centre y, radius, start angle, end angle
-  ctx.beginPath();
-  ctx.arc(60, 60, 45, 0, 2 * Math.PI);
-  ctx.fillStyle = "white";
-  ctx.fill();
-  // 3. Initials in the middle
-  ctx.fillStyle = "#1f5fa8";
-  ctx.font = "bold 36px Arial";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillText("EM", 60, 62);
 
-  // Bar chart of credit hours: each credit hour is 25 pixels high
-  const chart = document.getElementById('creditChart');
-  const chartCtx = chart.getContext('2d');
-  // Baseline of the chart
-  chartCtx.fillStyle = "#333333";
-  chartCtx.fillRect(10, 130, 280, 2);
-  // Bars: x, y (130 minus height), width, height
-  chartCtx.fillStyle = "#1f5fa8";
-  chartCtx.fillRect(25, 30, 40, 100);   // COA, 4 credit hours
-  chartCtx.fillRect(95, 30, 40, 100);   // DSA, 4 credit hours
-  chartCtx.fillRect(165, 55, 40, 75);   // IP, 3 credit hours
-  chartCtx.fillRect(235, 55, 40, 75);   // OOP, 3 credit hours
-  // Course names under the bars and values above them
-  chartCtx.fillStyle = "#000000";
-  chartCtx.font = "14px Arial";
-  chartCtx.textAlign = "center";
-  chartCtx.fillText("COA", 45, 146);
-  chartCtx.fillText("DSA", 115, 146);
-  chartCtx.fillText("IP", 185, 146);
-  chartCtx.fillText("OOP", 255, 146);
-  chartCtx.fillText("4", 45, 24);
-  chartCtx.fillText("4", 115, 24);
-  chartCtx.fillText("3", 185, 49);
-  chartCtx.fillText("3", 255, 49);
-</script>
 
 </body>
 </html>
