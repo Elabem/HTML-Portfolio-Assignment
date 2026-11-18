@@ -67,3 +67,375 @@ pre {
 mark {
     background-color: rgba(231, 155, 69, 0.28);
 }
+
+/* -------------------- Selectors and components -------------------- */
+.tagline {
+    background-color: #e6eeec;
+    border-radius: 999px;
+    display: inline-block;
+    letter-spacing: 1px;
+    padding: 0.35rem 1rem;
+}
+
+.btn {
+    background-color: #176b70;
+    border: 0;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.btn-secondary {
+    background-color: #718784;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #d5e2de;
+    border-left: 4px solid #e79b45;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(32, 52, 58, 0.07);
+}
+
+#contact {
+    background-color: #e7f0ed;
+}
+
+nav a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card > p {
+    color: #526c70;
+}
+
+h2 + p {
+    font-size: 1.05rem;
+}
+
+legend ~ label,
+#contact form label,
+#contact legend {
+    font-weight: 600;
+}
+
+h2::before {
+    color: #e79b45;
+    content: '// ';
+}
+
+h2 + p::first-line {
+    font-weight: 500;
+}
+
+/* -------------------- Links, states, and form controls -------------------- */
+a:link {
+    color: #176b70;
+}
+
+a:visited {
+    color: #526d73;
+}
+
+a:hover {
+    color: hsl(29, 70%, 42%);
+    text-decoration: underline;
+}
+
+a:active {
+    color: #b45132;
+}
+
+a[href^="https"]::after {
+    content: ' ↗';
+}
+
+a[href^="mailto:"]::before {
+    content: '✉ ';
+}
+
+a[href^="tel:"]::before {
+    content: '☎ ';
+}
+
+a[download]::before {
+    content: '↓ ';
+}
+
+a[href$=".html"]::after {
+    content: ' ↗';
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    border: 2px solid #176b70;
+    border-radius: 0.35rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+abbr[title] {
+    cursor: help;
+    text-decoration: underline dotted;
+}
+
+[class*="btn"] {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #12575b;
+}
+
+.btn-secondary:hover {
+    background-color: #526d68;
+}
+
+ol li:first-child {
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #edf4f1;
+}
+
+/* -------------------- Box model and page layout -------------------- */
+* {
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+section,
+aside {
+    margin: 2rem 0;
+}
+
+.card {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+}
+
+.card img,
+.card video {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+#logo,
+header img {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+header img {
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+nav a {
+    border: 1px solid #176b70;
+    border-radius: 0.4rem;
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.5rem 0.8rem;
+}
+
+fieldset {
+    border: 2px solid #d5e2de;
+    border-radius: 0.5rem;
+    margin: 0 0 1rem;
+    padding: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    max-width: 100%;
+    padding: 0.4rem;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #c5d0ce;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+caption {
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ul ul ul {
+    list-style-type: square;
+}
+
+button {
+    padding: 0.65rem 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.btn {
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.btn:hover,
+.card:hover {
+    transform: translateY(-2px);
+}
+
+:focus-visible {
+    outline: 3px solid #e79b45;
+    outline-offset: 3px;
+}
+
+/* -------------------- Layered backgrounds and transparency -------------------- */
+header {
+    background-color: #12575b;
+    background-image: url("../images/pattern.png"), linear-gradient(135deg, #176b70, #0b5364);
+    background-position: left top, center;
+    background-repeat: repeat, no-repeat;
+    color: white;
+}
+
+header h1 {
+    color: white;
+}
+
+header .tagline {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.92);
+}
+
+header nav a:link,
+header nav a:visited {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: white;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: white;
+    text-decoration: none;
+}
+
+header .btn {
+    background-color: hsl(33, 78%, 59%);
+    color: #20343a;
+}
+
+header .btn:hover {
+    background-color: #d88732;
+}
+
+#contact {
+    background-color: #e7f0ed;
+    background-image: linear-gradient(rgba(241, 246, 244, 0.9), rgba(241, 246, 244, 0.9)), url("../images/contact-bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+aside {
+    background-color: #fff8ee;
+    background-image: radial-gradient(circle at top left, #ffe7c5, rgba(255, 255, 255, 0.82) 70%);
+    border-left: 6px solid #e79b45;
+    padding: 1rem 1.5rem;
+}
+
+footer {
+    background-color: #20343a;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+footer a:link,
+footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: #ffd39e;
+}
+
+.card img {
+    opacity: 0.88;
+    transition: opacity 180ms ease;
+}
+
+.card:hover img {
+    opacity: 1;
+}
+
+dialog {
+    border: 0;
+    border-radius: 0.75rem;
+    box-shadow: 0 1rem 3rem rgba(15, 40, 44, 0.25);
+    max-width: min(90vw, 34rem);
+    padding: 1.5rem;
+}
+
+dialog::backdrop {
+    background-color: rgba(11, 45, 58, 0.65);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .btn,
+    .card img {
+        transition: none;
+    }
+}
