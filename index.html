@@ -8,6 +8,10 @@
 <meta name="author" content="Elabem Medfer Alemu">
 <title>Elabem Medfer Alemu | Portfolio</title>
 <link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -15,26 +19,26 @@
 <canvas id="logo" width="120" height="120" role="img" aria-label="Logo with the initials EM">Elabem Medfer Alemu logo</canvas>
 <h1>Elabem Medfer Alemu</h1>
 <img src="images/profile.jpg" alt="Portrait of Elabem Medfer Alemu" title="Elabem Medfer Alemu" width="200" height="200">
-<p>Software Engineering student, Year 3, Addis Ababa Science and Technology University</p>
-<button type="button" onclick="document.getElementById('contactDialog').showModal()">Contact me</button>
+<p class="tagline">Software Engineering student, Year 3, Addis Ababa Science and Technology University</p>
+<button type="button" class="btn" onclick="document.getElementById('contactDialog').showModal()">Contact me</button>
 <dialog id="contactDialog">
 <h2>Get in touch</h2>
 <p>You are welcome to contact me about projects, study groups or other opportunities.</p>
-<p><a href="#contact" onclick="document.getElementById('contactDialog').close()">Send me a message</a> or <a href="files/cv.pdf" download>download my CV</a>.</p>
-<button type="button" onclick="document.getElementById('contactDialog').close()">Close</button>
+<p><a href="#contact" onclick="document.getElementById('contactDialog').close()">Send me a message</a> or <a href="files/CV.pdf" download>download my CV</a>.</p>
+<button type="button" class="btn btn-secondary" onclick="document.getElementById('contactDialog').close()">Close</button>
 </dialog>
 <nav>
 <p>
 <a href="#intro">Introduction</a>
-| <a href="#about">About Me</a>
-| <a href="#languages">Technologies</a>
-| <a href="#skills">Additional Skills</a>
-| <a href="#academic">Academic Record</a>
-| <a href="#formatting">Formatting Demo</a>
-| <a href="#quotation">Quotation</a>
-| <a href="#learning">Learning Path</a>
-| <a href="#contact">Contact</a>
-| <a href="projects.html">Projects Page</a>
+<a href="#about">About Me</a>
+<a href="#languages">Technologies</a>
+<a href="#skills">Additional Skills</a>
+<a href="#academic">Academic Record</a>
+<a href="#formatting">Formatting Demo</a>
+<a href="#quotation">Quotation</a>
+<a href="#learning">Learning Path</a>
+<a href="#contact">Contact</a>
+<a href="projects.html">Projects Page</a>
 </p>
 </nav>
 </header>
@@ -68,14 +72,14 @@ Your browser does not support the audio element.
 <p>These are the programming languages and technologies I have used:</p>
 <ul>
 <li>Programming Languages
-<ul type="square">
+<ul>
 <li>C++</li>
 <li>C</li>
 <li>SQL</li>
 </ul>
 </li>
 <li>Web Technologies
-<ul type="circle">
+<ul>
 <li>HTML</li>
 <li>CSS</li>
 </ul>
@@ -118,7 +122,7 @@ Your browser does not support the audio element.
 <section id="academic">
 <h2>Academic Record</h2>
 <p>Addis Ababa Science and Technology University (<abbr title="Addis Ababa Science and Technology University">AASTU</abbr>), Department of Software Engineering. The table below shows my courses for Year&nbsp;3, First&nbsp;Semester.</p>
-<table border="1" cellpadding="8" cellspacing="0">
+<table>
 <caption>Academic Record: Year 3, First Semester</caption>
 <thead>
 <tr>
@@ -229,7 +233,7 @@ int main() {
 <p>Source: Harold Abelson and Gerald Jay Sussman, <cite>Structure and Interpretation of Computer Programs</cite>.</p>
 <p>A short quotation inside a sentence: a well-known saying among programmers is <q>Talk is cheap. Show me the code.</q> (Linus Torvalds).</p>
 <h3>A talk to watch</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UF8uR6Z6KLc?si=iObA3fiQO_wOhIkv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UF8uR6Z6KLc?si=iObA3fiQO_wOhIkv" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </aside>
 
 <section id="learning">
@@ -351,8 +355,8 @@ int main() {
 <input type="checkbox" id="copy" name="copy" value="yes">
 <label for="copy">Send me a copy of this message</label>
 </fieldset>
-<button type="submit">Send Message</button>
-<button type="reset">Clear</button>
+<button type="submit" class="btn">Send Message</button>
+<button type="reset" class="btn btn-secondary">Clear</button>
 </form>
 </section>
 
